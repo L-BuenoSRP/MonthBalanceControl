@@ -1,0 +1,81 @@
+<div class="p-4">
+  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-6 text-center p-4">
+      <h1 class="fw-bold text-primary text-capitalize">
+        Orçamento Mês {{ mes }}
+      </h1>
+    </div>
+    <div class="col-3"></div>
+  </div>
+  <mat-divider></mat-divider>
+  <div class="row p-4">
+    <div class="col-1"></div>
+    <div class="col-10">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>Balanço</mat-card-title>
+          <mat-card-subtitle>Controle do mês</mat-card-subtitle>
+        </mat-card-header>
+        <mat-divider></mat-divider>
+        <mat-card-content>
+          <mat-list class="pt-4">
+            <mat-list-item mat-subheader>
+              <div mat-line>Conta Corrente</div>
+              <div>
+                <button class="btn btn-primary">Add</button>
+              </div>
+            </mat-list-item>
+            <mat-list-item *ngFor="let folder of this.folders">
+              <mat-icon mat-list-icon>folder</mat-icon>
+              <div mat-line>{{ folder.name }}</div>
+              <div mat-line>{{ folder.updated | date }}</div>
+              <div>Valor</div>
+            </mat-list-item>
+            <mat-divider [inset]="true"></mat-divider>
+            <mat-list-item>
+              <div mat-line>Total</div>
+              <div>Valor</div>
+            </mat-list-item>
+          </mat-list>
+
+          <mat-divider></mat-divider>
+
+          <mat-list class="pt-4">
+            <mat-list-item mat-subheader>
+              <div mat-line>Cartão 1</div>
+              <div>
+                <button class="btn btn-primary">Add</button>
+              </div>
+            </mat-list-item>
+            <mat-list-item *ngFor="let note of notes">
+              <mat-icon mat-list-icon>note</mat-icon>
+              <div mat-line>{{ note.name }}</div>
+              <div mat-line>{{ note.updated | date }}</div>
+              <div>Valor</div>
+            </mat-list-item>
+            <mat-divider [inset]="true"></mat-divider>
+            <mat-list-item>
+              <div mat-line>Total</div>
+              <div>Valor</div>
+            </mat-list-item>
+          </mat-list>
+        </mat-card-content>
+        <!-- <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions> -->
+        <mat-divider></mat-divider>
+        <mat-card-footer>
+          <div class="d-flex p-4">
+            <p class="fw-bold">Valor Total:&nbsp;&nbsp;</p>
+            <p>200</p>
+          </div>
+        </mat-card-footer>
+      </mat-card>
+    </div>
+    <div class="col-1"></div>
+  </div>
+  <div class="row"></div>
+</div>

@@ -1,0 +1,67 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.min.css";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+a.route-active {
+  background-color: #b5b5b5 !important;
+  color: #3c3c3c !important;
+}
+
+div.content .top-2 {
+  margin-top: 2rem;
+}
+
+div.content .top-3 {
+  margin-top: 3rem;
+}
+
+div.content .top-4 {
+  margin-top: 4rem;
+}
+
+div.content .top-5 {
+  margin-top: 5rem;
+}
+
+button.mat-fab mat-icon {
+  margin-top: 0.3rem;
+}
+
+
+button.icon-2x {
+  width: 4rem;
+  height: 4rem;
+}
+
+button.icon-2x mat-icon {
+  transform: scale(2);
+}
+
+
+button.icon-3x {
+  width: 5rem;
+  height: 5rem;
+}
+
+button.icon-3x mat-icon {
+  transform: scale(3);
+}
+
+
+button.icon-5x {
+  width: 8rem;
+  height: 8rem;
+}
+
+button.icon-5x mat-icon {
+  transform: scale(5);
+}
+
+
