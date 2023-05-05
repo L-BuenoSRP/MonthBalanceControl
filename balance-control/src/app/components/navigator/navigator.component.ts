@@ -1,16 +1,14 @@
 import { Component } from '@angular/core';
+import { Observable, map, shareReplay } from 'rxjs';
+import { navMenu } from 'src/app/models/nav-menu-model';
 import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
-import { Observable } from 'rxjs';
-import { map, shareReplay } from 'rxjs/operators';
-import { navMenu } from '../models/navMenu-model';
 
 @Component({
   selector: 'app-navigator',
   templateUrl: './navigator.component.html',
-  styleUrls: ['./navigator.component.css']
+  styleUrls: ['./navigator.component.scss']
 })
 export class NavigatorComponent {
-
   menuList = navMenu;
 
   isHandset$: Observable<boolean> = this.breakpointObserver.observe(Breakpoints.Handset)
@@ -20,5 +18,4 @@ export class NavigatorComponent {
     );
 
   constructor(private breakpointObserver: BreakpointObserver) {}
-
 }

@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class OrcamentoComponent implements OnInit {
   constructor() {}
 
-  mes: string;
+  mes: string="";
   folders: any[] = [
     {
       name: 'Photos',

@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-import { navMenu } from './models/navMenu-model';
-
+import { RouterModule, Routes } from '@angular/router';
+import { navMenu } from './models/nav-menu-model';
 
 const routes: Routes = [
   {
@@ -10,9 +9,7 @@ const routes: Routes = [
     redirectTo: 'home',
   },
 ];
-
 routes.push.apply(routes, navMenu);
-
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]

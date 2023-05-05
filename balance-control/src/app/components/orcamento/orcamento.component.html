@@ -12,31 +12,32 @@
   <div class="row p-4">
     <div class="col-1"></div>
     <div class="col-10">
-      <mat-card class="example-card">
+      <mat-card>
         <mat-card-header>
-          <div mat-card-avatar class="example-header-image"></div>
-          <mat-card-title>Balanço</mat-card-title>
-          <mat-card-subtitle>Controle do mês</mat-card-subtitle>
+          <mat-card-title-group>
+            <mat-card-title>Balanço</mat-card-title>
+            <mat-card-subtitle>Controle do mês</mat-card-subtitle>
+          </mat-card-title-group>
         </mat-card-header>
         <mat-divider></mat-divider>
         <mat-card-content>
           <mat-list class="pt-4">
             <mat-list-item mat-subheader>
-              <div mat-line>Conta Corrente</div>
-              <div>
+              <div matListItemLine>Conta Corrente</div>
+              <div matListItemMeta>
                 <button class="btn btn-primary">Add</button>
               </div>
             </mat-list-item>
             <mat-list-item *ngFor="let folder of this.folders">
-              <mat-icon mat-list-icon>folder</mat-icon>
-              <div mat-line>{{ folder.name }}</div>
-              <div mat-line>{{ folder.updated | date }}</div>
-              <div>Valor</div>
+              <mat-icon matListItemIcon>folder</mat-icon>
+              <div matListItemTitle>{{ folder.name }}</div>
+              <div matListItemLine>{{ folder.updated | date }}</div>
+              <div matListItemLine>Valor</div>
             </mat-list-item>
             <mat-divider [inset]="true"></mat-divider>
             <mat-list-item>
-              <div mat-line>Total</div>
-              <div>Valor</div>
+              <div matListItemTitle>Total</div>
+              <div matListItemLine>Valor</div>
             </mat-list-item>
           </mat-list>
 
@@ -44,21 +45,21 @@
 
           <mat-list class="pt-4">
             <mat-list-item mat-subheader>
-              <div mat-line>Cartão 1</div>
-              <div>
+              <div matListItemLine>Cartão 1</div>
+              <div matListItemMeta>
                 <button class="btn btn-primary">Add</button>
               </div>
             </mat-list-item>
             <mat-list-item *ngFor="let note of notes">
-              <mat-icon mat-list-icon>note</mat-icon>
-              <div mat-line>{{ note.name }}</div>
-              <div mat-line>{{ note.updated | date }}</div>
-              <div>Valor</div>
+              <mat-icon matListItemIcon>note</mat-icon>
+              <div matListItemLine>{{ note.name }}</div>
+              <div matListItemLine>{{ note.updated | date }}</div>
+              <div matListItemLine>Valor</div>
             </mat-list-item>
             <mat-divider [inset]="true"></mat-divider>
             <mat-list-item>
-              <div mat-line>Total</div>
-              <div>Valor</div>
+              <div matListItemTitle>Total</div>
+              <div matListItemLine>Valor</div>
             </mat-list-item>
           </mat-list>
         </mat-card-content>
