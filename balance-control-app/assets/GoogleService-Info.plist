@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBLTaD81yg9Mo5xqZ9M6iawdHo0Sifl-dU</string>
+	<key>GCM_SENDER_ID</key>
+	<string>733039487780</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.control.balance.f</string>
+	<key>PROJECT_ID</key>
+	<string>f-balance-control</string>
+	<key>STORAGE_BUCKET</key>
+	<string>f-balance-control.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:733039487780:ios:07c46bd02c8cf2ce8aa1b1</string>
+	<key>DATABASE_URL</key>
+	<string>https://f-balance-control-default-rtdb.firebaseio.com</string>
+</dict>
+</plist>

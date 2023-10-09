@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "name": "balance-control-app",
+    "slug": "balance-control-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "googleServicesFile": "./assets/GoogleService-Info.plist",
+      "supportsTablet": true
+    },
+    "plugins": ["@react-native-firebase/app"],
+    "android": {
+      "googleServicesFile": "./assets/google-services.json",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
+}
