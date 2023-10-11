@@ -18,13 +18,17 @@
       "googleServicesFile": "./assets/GoogleService-Info.plist",
       "supportsTablet": true
     },
-    "plugins": ["@react-native-firebase/app"],
+    "plugins": [
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth"
+    ],
     "android": {
       "googleServicesFile": "./assets/google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.control.balance.f"
     },
     "web": {
       "favicon": "./assets/favicon.png"
