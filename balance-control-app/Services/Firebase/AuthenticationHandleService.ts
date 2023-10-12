@@ -27,7 +27,7 @@ export class AuthenticationHandleService {
             });
           break;
         default:
-          result = `${err.code} ${err.message}`;
+          result = this.CommonCatchAuthentication(err);
           break;
       }
     else result = "Erro ao registrar o usuario";
@@ -42,10 +42,25 @@ export class AuthenticationHandleService {
           result = "Credenciais Inválidas.";
           break;
         default:
-          result = `${err.code} ${err.message}`;
+          result = this.CommonCatchAuthentication(err);
           break;
       }
 
+    return result;
+  };
+
+  CommonCatchAuthentication = (err) => {
+    let result = "";
+    if (err.code) {
+      switch (err.code) {
+        case "auth/too-many-requests":
+          result = "Aguarde, excesso de tentativas no login";
+          break;
+        default:
+          result = `${err.code} ${err.message}`;
+          break;
+      }
+    }
     return result;
   };
 }
