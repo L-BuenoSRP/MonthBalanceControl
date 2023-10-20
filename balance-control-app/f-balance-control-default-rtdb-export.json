@@ -1,0 +1,68 @@
+{
+  "Usuarios": {
+    "MyUserId": {
+      "DiasAtualizacao": [],
+      "Cartoes": {
+        "Cartao 1": {
+          "DiaVencimento": 2,
+          "Compras": {
+            "Descricao": "Descrição da compra",
+            "ValorTotal": 300,
+            "Mes-Ano-Parcela(Este é o campo do valor do mes da parcela em questão)": {
+              "IdentificadorCompra": "Guid gerado para identicicar e a fim de agrupar parcelas de uma unica compra",
+              "NumeroParcelas": 2,
+              "ParcelaAtual": 1,
+              "ValorParcela": 200
+            }
+          },
+          "Faturas": {
+            "Mes-Ano-Fatura(Este é o campo do valor do mes da parcela em questão)": {
+              "IdentificadorPagamento": "Guid que identifica o valor ja pago, onde tera a data e demais informações do pagamento",
+              "ValorParcelasCadastradas": 20,
+              "ValorAtualizado": 300
+            }
+          }
+        }
+      },
+      "Contas": {
+        "Mes-Ano-Conta(Este é o campo do valor do mes da conta em questão)": {
+          "IdentificadorContaRecorrente": "Guid gerado para identicicar e a fim de agrupar conta recorrente",
+          "IdentificadorPagamento": "Guid que identifica o valor ja pago, onde tera a data e demais informações do pagamento",
+          "DataProgramada": "2023-12-15",
+          "Descricao": "Descrição da conta",
+          "ValorConta": 200
+        }
+      },
+      "ContasRecorrentes": {
+        "IdentificadorContaRecorrente(Guid gerado para identicicar e a fim de agrupar conta recorrente)": {
+          "ValorConta": 200,
+          "DiaDoPagamento": 5,
+          "Descricao": "Descrição da conta"
+        }
+      },
+      "Eventos": {
+        "Mes-Ano-Evento(Este é o campo do valor do mes do pagamento em questão)": {
+          "IdentificadorPagamento( Guid que identifica o valor ja pago, onde tera a data e demais informações do pagamento)": {
+            "Data": "2023-12-05",
+            "Valor": 200,
+            "TipoEvento": "Fatura | Recebimento | Conta | AtualizacaoSaldo",
+Validar como seria a melhor forma de identificar os vinculos das entidades
+, pois a Eventos tem o intuito de possuir todas as informações dos eventos de cobrança, atualizações de salto, recebimentos, etc
+, para que ao consultar os registros apenas, ja estejam no local correto, não necessitando mais buscas ou calculos de outros locais
+          }
+        }
+      },
+      "Recebimentos": {
+        "Mes-Ano-Recebimento(Este é o campo do valor do mes do recebimento em questão)": {
+          "DataRecebido": "2023-12-15",
+          "ValorRecebido": 2100,
+          "IdentificadorRecebimentoRecorrente": ""
+        }
+      },
+      "RecebimentosRecorrentes": {
+        "Valor": 200,
+        "Dia": 30
+      }
+    }
+  }
+}

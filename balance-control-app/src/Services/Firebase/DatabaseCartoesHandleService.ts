@@ -16,7 +16,6 @@ export class DataBaseCartoesHandleService {
       .get()
       .then((querySnapshot) => {
         console.log("Total users: ", querySnapshot.size);
-
         querySnapshot.forEach((documentSnapshot) => {
           let f2 =
             documentSnapshot.get<FirebaseFirestoreTypes.DocumentReference>(
@@ -35,6 +34,42 @@ export class DataBaseCartoesHandleService {
             documentSnapshot.data()
           );
         });
+      });
+  };
+
+  NewDataWithdate = (dateText, callback) => {
+    let dateNum = Date.parse(`${dateText} 00:00:00`);
+    if (isNaN(dateNum)) return;
+    let date = new Date(dateNum);
+
+    return firestore()
+      .collection("cdate")
+      .add({
+        data: `${date.getFullYear()}-${date.getMonth() + 1}-${date.getDate()}`,
+      })
+      .then((doc) => {
+        console.log("ok" + doc.id);
+        this.getdate(callback);
+      })
+      .catch((err) => {
+        return console.log(err);
+      });
+  };
+
+  getdate = (callback) => {
+    return firestore()
+      .collection("cdate")
+      .where("data", "==", "2023-5-10")
+      .get()
+      .then((res) => {
+        let dates = res.docs.map((doc) => {
+          let data = doc.data();
+          return { date: new Date(data.data).toDateString() };
+        });
+        return callback(dates);
+      })
+      .catch((err) => {
+        return console.log(err);
       });
   };
 }
