@@ -10,23 +10,22 @@ export class DataBaseCartoesHandleService {
   //     id: document.id,
   //     ...document.data()
   //   };
-  GetData = () => {
+  GetData = async () => {
     firestore()
       .collection("c1")
+      .where("f2", '==', await firestore().collection("c2").doc("abc"))
       .get()
       .then((querySnapshot) => {
         console.log("Total users: ", querySnapshot.size);
-        querySnapshot.forEach((documentSnapshot) => {
+        querySnapshot.forEach(async (documentSnapshot) => {
           let f2 =
             documentSnapshot.get<FirebaseFirestoreTypes.DocumentReference>(
               "f2"
             );
 
           if (f2) {
-            console.log(f2);
-            f2.get().then((doc) => {
-              console.log(doc);
-            });
+            var l = (await f2.get()).data();
+            console.log(l);
           }
           console.log(
             "User ID: ",
@@ -72,4 +71,8 @@ export class DataBaseCartoesHandleService {
         return console.log(err);
       });
   };
+
+  getF2Group = () =>{
+    // return firestore().collectionGroup()
+  }
 }

@@ -1,0 +1,117 @@
+{
+    "Usuarios": [
+        {
+            "UserId": "Id Criado na autenticação do usuario",
+            "PeriodoMesAtual": "Referencia do periodo mes atual para calculo",
+            "Periodos": [
+                {
+                    "PeriodoId": "Gerado automaticamente",
+                    "Descricao": "",
+                    "NumeroPeriodo": 1,
+                    "DiaFim": 30,
+                    "Ativo": true
+                }
+            ],
+            "PeriodosMes": [
+                {
+                    "PeriodosMesId": "Id criado com o prefixo do mes ano e dia fim do periodo ex: (2023-01-15)",
+                    "PeriodoRef": "Referencia do Periodo usado",
+                    "ProximoPeriodoMes": "Referencia do Id do proximo periodo mes para identificar qual sera o proximo a calcular",
+                    "IdentificadorPeriodoMes": "Caso não de pra ordenar pelo id da chave do documento(PeriodoMesId), repetir o valor nesse campo, a fim de sempre ter a sequencia dos periodos, facilitando a busca de um periodo apos o outro",
+                    "AnteriorPeriodoMes": "Referencia do Id do proximo periodo mes para identificar qual sera o proximo a calcular",
+                    "AtualizacoesTotais": {
+                        "CartoesPeriodoParcial": 0,
+                        "CartoesPeriodo": 0,
+                        "DividasPeriodoParcial": 0,
+                        "DividasPeriodo": 0,
+                        "ReceitasPeriodoParcial": 0,
+                        "ReceitasPeriodo": 0
+                    },
+                    "DividasPeriodo": [
+                        {
+                            "DividasPeriodoId": "Gerado automaticamente",
+                            "Valor": 0,
+                            "ParcelaAtual": 0,
+                            "ParcelasTotais": 0,
+                            "Categoria": "Categoria da divida",
+                            "Descricao": "Descricao",
+                            "DataParcial": "Data Prevista para a cobrança",
+                            "DataFinal": "Data Final da cobrança, preenchido apenas se adiantar alguma cobrança no periodo",
+                            "DividaRef": "Referencia da divida usada",
+                            "Concluido": true
+                        }
+                    ],
+                    "ParcelasCartoesPeriodo": [
+                        {
+                            "ParcelasCartoesPeriodoId": "Gerado automaticamente",
+                            "Valor": 0,
+                            "ParcelaAtual": 0,
+                            "ParcelasTotais": 0,
+                            "Categoria": "Categoria da divida",
+                            "Descricao": "Descricao",
+                            "DataParcial": "Data Prevista para a cobrança",
+                            "DataFinal": "Data Final da cobrança, preenchido apenas se adiantar alguma cobrança no periodo",
+                            "ParcelaCartaoRef": "Referencia da divida usada",
+                            "Concluido": true
+                        }
+                    ],
+                    "ReceitasPeriodo": [
+                        {
+                            "ReceitasPeriodoId": "Gerado automaticamente",
+                            "Valor": 0,
+                            "Categoria": "Categoria da divida",
+                            "Descricao": "Descricao",
+                            "DataParcial": "Data Prevista para a receita",
+                            "DataFinal": "Data Final da receita, preenchido apenas se adiantar alguma cobrança no periodo",
+                            "ReceitaRef": "Referencia da divida usada(Se inserido como ocorrencia unica, não precisara da referencia",
+                            "Concluido": true
+                        }
+                    ]
+                }
+            ],
+            "Dividas": [
+                {
+                    "DividasId": "Gerado automaticamente",
+                    "Valor": 0,
+                    "ParcelasTotais": 0,
+                    "Concluida": true,
+                    "Categoria": "Categoria da divida",
+                    "Descricao": "Descricao",
+                    "DataPrevista": "Data Prevista para a cobrança"
+                }
+            ],
+            "Cartoes": [
+                {
+                    "CartaoId": "Gerado automaticamente",
+                    "Descricao":"Descricao cartao",
+                    "PeriodoRef": "Referencia do Periodo usado",
+                    "Dia": 5
+                }
+            ],
+            "ParcelasCartoes": [
+                {
+                    "ParcelasCartoesId": "Gerado automaticamente",
+                    "Valor": 0,
+                    "ParcelasTotais": 0,
+                    "Concluida": true,
+                    "Categoria": "Categoria da divida",
+                    "Descricao": "Descricao",
+                    "DataParcial": "Data Prevista para a cobrança",
+                    "CartaoRef": "Referencia do cartão usado"
+                }
+            ],
+            "Receitas": [
+                {
+                    "ReceitasId": "Gerado automaticamente",
+                    "Valor": 0,
+                    "Categoria": "Categoria da divida",
+                    "Descricao": "Descricao receita",
+                    "DataParcial": "Data Prevista para a cobrança",
+                    "Recorrente": true,
+                    "DataFinal": "Data Final da cobrança, preenchido apenas se adiantar alguma cobrança no periodo",
+                    "PeriodoRef": "Referencia do Periodo usado"
+                }
+            ]
+        }
+    ]
+}

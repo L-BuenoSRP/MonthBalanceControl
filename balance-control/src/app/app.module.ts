@@ -17,12 +17,6 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { OrcamentoComponent } from './components/orcamento/orcamento.component';
-import { NgxIndexedDBModule } from 'ngx-indexed-db';
-import { dbConfig } from './config/IndexedDBConfig';
-
-
-
-
 
 @NgModule({
   declarations: [
@@ -42,8 +36,7 @@ import { dbConfig } from './config/IndexedDBConfig';
     MatIconModule,
     MatListModule,
     MatGridListModule,
-    MatCardModule,
-    NgxIndexedDBModule.forRoot(dbConfig)
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

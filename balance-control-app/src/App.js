@@ -10,6 +10,7 @@ import {
 import database from "@react-native-firebase/database";
 import React, { useState, useEffect } from "react";
 import auth from "@react-native-firebase/auth";
+// import { initializeApp } from "firebase/app";
 import { AuthenticationHandleService } from "./Services/Firebase/AuthenticationHandleService";
 import { DataBaseCartoesHandleService } from "./Services/Firebase/DatabaseCartoesHandleService";
 
@@ -29,6 +30,17 @@ export default function App() {
     setDatas(dataBaseCartoesHandleService.getdate(setDatas))
   }
 
+  const firebaseConfig = {
+    apiKey: "AIzaSyAjLlJIjXA91SDlaEliVrXk9D87XkeYi3s",
+    authDomain: "f-balance-control.firebaseapp.com",
+    databaseURL: "https://f-balance-control-default-rtdb.firebaseio.com",
+    projectId: "f-balance-control",
+    storageBucket: "f-balance-control.appspot.com",
+    messagingSenderId: "733039487780",
+    appId: "1:733039487780:web:edd6d22439be5d3f8aa1b1",
+    measurementId: "G-8NH4ZDCX8B"
+  };
+
   function logout() {
     auth()
       .signOut()
@@ -38,6 +50,7 @@ export default function App() {
   }
 
   useEffect(() => {
+    // initializeApp(firebaseConfig);r
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
 
     dataBaseCartoesHandleService.GetData()
