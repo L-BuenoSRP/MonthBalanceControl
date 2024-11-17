@@ -1,0 +1,49 @@
+{
+  "project_info": {
+    "project_number": "733039487780",
+    "firebase_url": "https://f-balance-control-default-rtdb.firebaseio.com",
+    "project_id": "f-balance-control",
+    "storage_bucket": "f-balance-control.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733039487780:android:14ef618701a021a58aa1b1",
+        "android_client_info": {
+          "package_name": "br.com.monthbalancecontrolandroidapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxej8A4Wektkaz4rziBwRvHNKH0mviugU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:733039487780:android:228888ac09fbfd178aa1b1",
+        "android_client_info": {
+          "package_name": "com.control.balance.f"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxej8A4Wektkaz4rziBwRvHNKH0mviugU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

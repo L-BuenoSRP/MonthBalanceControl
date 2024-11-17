@@ -76,7 +76,7 @@ public class BalanceTimelineFragment extends Fragment {
         rv.setAdapter(timeLineAdapter);
     }
 
-    public class TimeLineAdapter extends RecyclerView.Adapter {
+    public static class TimeLineAdapter extends RecyclerView.Adapter {
         private static final int VIEW_TYPE_DEAL_FIRST_ITEM = 1;
         private static final int VIEW_TYPE_DEAL_MIDDLE_ITEM = 2;
         private static final int VIEW_TYPE_DEAL_LAST_ITEM = 3;
@@ -141,11 +141,11 @@ public class BalanceTimelineFragment extends Fragment {
             }
         }
 
-        private class FirstDealHolder extends RecyclerView.ViewHolder {
+        public static class FirstDealHolder extends RecyclerView.ViewHolder {
             TextView monthPurchased, yearPurchased, productName, productPrice;
             ImageView dealProductImage;
 
-            FirstDealHolder(View itemView) {
+            public FirstDealHolder(View itemView) {
                 super(itemView);
                 monthPurchased = itemView.findViewById(R.id.monthPurchased);
                 yearPurchased = itemView.findViewById(R.id.yearPurchased);
@@ -154,7 +154,7 @@ public class BalanceTimelineFragment extends Fragment {
                 productPrice = itemView.findViewById(R.id.productPrice);
             }
 
-            void bind(TimeLineModel dealsModel) {
+            public void bind(TimeLineModel dealsModel) {
                 monthPurchased.setText(dealsModel.month);
                 yearPurchased.setText(dealsModel.year);
                 productName.setText(dealsModel.productName);
@@ -162,11 +162,11 @@ public class BalanceTimelineFragment extends Fragment {
             }
         }
 
-        private class MiddleDealHolder extends RecyclerView.ViewHolder {
+        public static class MiddleDealHolder extends RecyclerView.ViewHolder {
             TextView monthPurchased, yearPurchased, productName, productPrice;
             ImageView dealProductImage;
 
-            MiddleDealHolder(View itemView) {
+            public MiddleDealHolder(View itemView) {
                 super(itemView);
                 monthPurchased = itemView.findViewById(R.id.monthPurchased);
                 yearPurchased = itemView.findViewById(R.id.yearPurchased);
@@ -175,7 +175,7 @@ public class BalanceTimelineFragment extends Fragment {
                 productPrice = itemView.findViewById(R.id.productPrice);
             }
 
-            void bind(TimeLineModel dealsModel) {
+            public void bind(TimeLineModel dealsModel) {
                 monthPurchased.setText(dealsModel.month);
                 yearPurchased.setText(dealsModel.year);
                 productName.setText(dealsModel.productName);
@@ -183,11 +183,11 @@ public class BalanceTimelineFragment extends Fragment {
             }
         }
 
-        private class LastDealHolder extends RecyclerView.ViewHolder {
+        public static class LastDealHolder extends RecyclerView.ViewHolder {
             TextView monthPurchased, yearPurchased, productName, productPrice;
             ImageView dealProductImage;
 
-            LastDealHolder(View itemView) {
+            public LastDealHolder(View itemView) {
                 super(itemView);
                 monthPurchased = itemView.findViewById(R.id.monthPurchased);
                 yearPurchased = itemView.findViewById(R.id.yearPurchased);
@@ -196,7 +196,7 @@ public class BalanceTimelineFragment extends Fragment {
                 productPrice = itemView.findViewById(R.id.productPrice);
             }
 
-            void bind(TimeLineModel dealsModel) {
+            public void bind(TimeLineModel dealsModel) {
                 monthPurchased.setText(dealsModel.month);
                 yearPurchased.setText(dealsModel.year);
                 productName.setText(dealsModel.productName);

@@ -9,7 +9,6 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
-
 import br.com.monthbalancecontrolandroidapp.databinding.FragmentSlideshowBinding;
 
 public class SlideshowFragment extends Fragment {
